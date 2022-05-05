@@ -1,0 +1,53 @@
+<html lang="en">
+
+<head>
+  <title>Function plotter</title>
+  <meta charset="utf-8" />
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="https://mauriciopoppe.github.io/function-plot/js/function-plot.js"></script>
+  <script src="j.js"></script>
+  <link rel='stylesheet' href='bootstrap.css'>
+</head>
+
+<body style="padding: 20px;" >
+  <h2>Function plotter</h2>
+  <div class="layer">
+  <section id="plotSettings " style="width: 300px; padding: 30px;" >
+
+    <!--Inputs -->
+    <div class="form-group">
+      <label for="xMin">Function: f(x)=</label>
+      <input type="text" class="form-control" id="function"  value="x^2*3"  onchange="plot();" >
+    </div>
+    
+    <div class="form-group">
+      <label for="xMin">X minimum value</label>
+      <input type="number" class="form-control" id="xMin"  value="0" onchange="plot();">
+    </div>
+    <div class="form-group">
+      <label for="xMin">X maximum value</label>
+      <input type="number" class="form-control" id="xMax"  value="10" onchange="plot();" >
+    </div>
+    
+    
+
+
+  
+  
+    <label for="color">Color: </label> value: <input type=color id="color" onchange="plot();">
+
+    <!--Errors will be displayed -->
+    <p></p>
+    <p id="error" class="text-primary"></p>
+    <button onclick="plot();">Plot it!</button>
+
+  </section>
+
+  <!--Result graph-->
+  <section id="plot">
+    <div id="myFunction"></div>
+  </section>
+  </div>
+</body>
+
+</html>
